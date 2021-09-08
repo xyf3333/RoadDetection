@@ -15,7 +15,8 @@ The purpose is detecting the yellow strip on the road and fellowing yellow strip
 ## Installation 
 
 The code should run using Python version 3.*.
-The necessary libraries are: numpy, rospy, adafruit_servokit, std_msgs, cv2
+
+The necessary libraries are: numpy, rospy, adafruit_servokit, std_msgs, OpenCV
 
 ## File Descriptions
 
