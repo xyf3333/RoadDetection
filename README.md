@@ -19,12 +19,12 @@ The necessary libraries are: numpy, rospy, adafruit_servokit, std_msgs, OpenCV, 
 
 ## File Descriptions
 
-README.md
-talker.py
+1.README.md
+2.talker.py
 Reading road data from camera,  processing and publishing real time messages. 
-listener.py
+3.listener.py
 Revicing the messages from LiDAR and talker.py and cantrol the motor using servoKit.
-LICENSE
+4.LICENSE
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
 The Data set used in this process is provided by **figure-8** that contains real labeled disaster messages received by an aid organisation during disaster events.
