@@ -3,8 +3,7 @@
 
 ## Project overview
 
-The purpose is detecting the yellow strip on the road and fellowing yellow strip using camera realtime data. 
-
+The purpose is detecting the yellow strip on the road, recognizing the stop sign and fellowing yellow strip using camera realtime data.
 ## Table of Contents
 
 1. [Installation](#installation)
@@ -16,7 +15,7 @@ The purpose is detecting the yellow strip on the road and fellowing yellow strip
 
 The code should run using Python version 3.*.
 
-The necessary libraries are: numpy, rospy, adafruit_servokit, std_msgs, OpenCV
+The necessary libraries are: numpy, rospy, adafruit_servokit, std_msgs, OpenCV, tensorflow, sensor_msgs
 
 ## File Descriptions
 
@@ -24,7 +23,7 @@ README.md
 talker.py
 Reading road data from camera,  processing and publishing real time messages. 
 listener.py
-Revicing the messages and cantrol the motor using servoKit.
+Revicing the messages from LiDAR and talker.py and cantrol the motor using servoKit.
 LICENSE
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
