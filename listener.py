@@ -19,8 +19,9 @@ import time
 kit  = ServoKit(channels = 16)
 
 def callback(msg1, msg2):
-    print(msg1)
-    
+    """
+    INPUT: msg1: data from cam_values node, msg2: LaserScan data
+    """
     check_road = msg1.data[0]
     check_centr = msg1.data[1]
     angle_1 = msg1.data[2]
@@ -75,12 +76,12 @@ def callback(msg1, msg2):
  
 def listener():
     
-
+    #initial the listener node
     rospy.init_node('listener', anonymous = True)
-
-    print("init node")
     cam_sub = message_filters.Subscriber('cam_values', Float32MultiArray)
     lidar_sub = message_filters.Subscriber('/scan', LaserScan)
+
+    #synchronize the data from cam_sub and lidar_sub nodes
     ts = message_filters.ApproximateTimeSynchronizer([cam_sub, lidar_sub], queue_size = 10, slop = 0.1, allow_headerless = True)
     ts.registerCallback(callback)
 
