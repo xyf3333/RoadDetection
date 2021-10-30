@@ -38,7 +38,7 @@ def callback(msg1, msg2):
     if left_min < 0.15 or right_min < 0.15 or top_centr_min < 0.25:
         kit.continuous_servo[11].throttle = 0
     #stop sign
-    if stop_sign == 1.0:
+    if stop_sign == 1.0 & centr_2 < 2.0:
         #print("stop sign detected_______________________________________________________")
         
         kit.continuous_servo[11].throttle = 0
