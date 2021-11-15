@@ -144,6 +144,12 @@ def check_zero_in_matrix(arr):
 
 
 def region_of_interest(img, vertices):
+    
+    """
+    Define the interest area
+    :param arr: a 2D array, interest area vertices
+    :return: a 2D array
+    """
     mask = np.zeros_like(img)
     match_mask_color = 255
     cv2.fillPoly(mask, vertices, match_mask_color)
